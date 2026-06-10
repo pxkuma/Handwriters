@@ -95,6 +95,64 @@ document.addEventListener('DOMContentLoaded', () => {
     }, step);
   }
 
+  // ── Parallax 3D Spheres ─────────────────────────────────────
+  const spheres = document.querySelectorAll('.css-3d-sphere');
+  if (spheres.length > 0) {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    
+    window.addEventListener('scroll', () => {
+      lastScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          spheres.forEach((sphere, index) => {
+            // Negative speed makes them float up as you scroll down (parallax effect)
+            const speed = (index + 1) * -0.15;
+            sphere.style.setProperty('--scroll-offset', `${lastScrollY * speed}px`);
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+  // ── Typing Effect ───────────────────────────────────────────
+  const typingText = document.querySelector('.typing-text');
+  if (typingText) {
+    const words = ["With Confidence.", "With Experts.", "With Ease."];
+    let wordIndex = 0;
+    let charIndex = words[0].length; // start fully typed initially
+    let isDeleting = false;
+
+    function type() {
+      const currentWord = words[wordIndex];
+      if (isDeleting) {
+        typingText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingText.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let typeSpeed = isDeleting ? 40 : 120;
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        typeSpeed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        typeSpeed = 400;
+      }
+
+      setTimeout(type, typeSpeed);
+    }
+    
+    // Start typing after an initial pause
+    setTimeout(type, 2000);
+  }
+
   // ── FAQ accordion ───────────────────────────────────────────
   document.querySelectorAll('.faq-question').forEach(q => {
     q.addEventListener('click', () => {

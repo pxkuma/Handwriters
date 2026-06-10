@@ -131,6 +131,7 @@
 </header>
 
 <nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-motto">ARTICLE · CONSULT · PUBLISH</div>
   <button class="mobile-close" id="mobileClose">&times;</button>
   <a href="index.html">Home</a>
   <a href="services.html">Services</a>
@@ -146,33 +147,94 @@
   <div class="css-3d-sphere sphere-2"></div>
   <div class="css-3d-sphere sphere-main"></div>
 
-  <div class="container hero-center">
-    <div class="hero-eyebrow fade-in">
-      <span class="hero-eyebrow-text">Trusted Since 2020</span>
-    </div>
-    <h1 class="fade-in fade-in-delay-1">
-      Elevate Your Research<br>
-      <em class="typing-text">With Confidence.</em>
-    </h1>
-    <p class="hero-desc fade-in fade-in-delay-2">
-      Expert-guided manuscript preparation, journal selection, and end-to-end submission support for Scopus, WoS, PubMed &amp; more.
-    </p>
-    <div class="hero-actions fade-in fade-in-delay-3">
-      <a href="services.html" class="btn btn-dark">Explore Services</a>
-      <a href="contact.html" class="btn btn-outline">Talk to an Expert</a>
-    </div>
-    <div class="hero-trust fade-in fade-in-delay-4">
-      <div class="trust-item">
-        <span class="trust-number">1000+</span>
-        <span class="trust-label">Papers Published</span>
+  <div class="container hero-content-wrap">
+    <div class="hero-left">
+      <div class="hero-eyebrow fade-in">
+        <span class="hero-eyebrow-text">Trusted Since 2020</span>
       </div>
-      <div class="trust-item">
-        <span class="trust-number">95%</span>
-        <span class="trust-label">Success Rate</span>
+      <h1 class="fade-in fade-in-delay-1">
+        Elevate Your Research<br>
+        <em class="typing-text">With Confidence.</em>
+      </h1>
+      <p class="hero-desc fade-in fade-in-delay-2">
+        Expert-guided manuscript preparation, journal selection, and end-to-end submission support for Scopus, WoS, PubMed &amp; more.
+      </p>
+      <div class="hero-actions fade-in fade-in-delay-3">
+        <a href="services.html" class="btn btn-dark">Explore Services</a>
+        <a href="contact.html" class="btn btn-outline">Talk to an Expert</a>
+        <a href="brochure.pdf" class="btn btn-outline" target="_blank" title="Download Brochure"><i class="fas fa-file-download"></i> Brochure</a>
       </div>
-      <div class="trust-item">
-        <span class="trust-number">50+</span>
-        <span class="trust-label">Patents Filed</span>
+      <div class="hero-trust fade-in fade-in-delay-4">
+        <div class="trust-item">
+          <div class="trust-number">1000<span>+</span></div>
+          <span class="trust-label">Papers Published</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">95<span>%</span></div>
+          <span class="trust-label">Success Rate</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">50<span>+</span></div>
+          <span class="trust-label">Patents Filed</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-right fade-in fade-in-delay-3">
+      <div class="hero-quote-wrapper">
+        <div class="css-3d-sphere hero-right-sphere-1"></div>
+        <div class="css-3d-sphere hero-right-sphere-2"></div>
+        
+        <!-- 3D Pen Graphic -->
+        <div class="hero-3d-pen">
+          <svg viewBox="0 0 200 200" class="pen-svg">
+            <defs>
+              <linearGradient id="quill-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f2d26f"/>
+                <stop offset="50%" stop-color="#b89552"/>
+                <stop offset="100%" stop-color="#735722"/>
+              </linearGradient>
+              <linearGradient id="quill-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#3a3a3a"/>
+                <stop offset="50%" stop-color="#1a1a1a"/>
+                <stop offset="100%" stop-color="#050505"/>
+              </linearGradient>
+              <filter id="quill-shadow" x="-20%" y="-20%" width="150%" height="150%">
+                <feDropShadow dx="8" dy="16" stdDeviation="10" flood-color="#000" flood-opacity="0.2"/>
+              </filter>
+            </defs>
+            <g filter="url(#quill-shadow)" transform="rotate(35 100 100) translate(20, -20) scale(0.8)">
+              <!-- Feather Vanes -->
+              <path d="M100,20 C120,40 140,80 120,120 C110,140 105,150 100,160 C95,150 90,140 80,120 C60,80 80,40 100,20 Z" fill="url(#quill-dark)"/>
+              
+              <!-- Feather Texturing (Highlights & Cuts) -->
+              <path d="M100,20 C115,50 120,90 105,120 L100,125 L100,20 Z" fill="#ffffff" opacity="0.1"/>
+              <path d="M125,70 L115,75" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+              <path d="M132,90 L118,98" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+              <path d="M75,80 L85,85" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+              <path d="M80,110 L90,115" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+
+              <!-- Rachis (Center Shaft) -->
+              <path d="M98,25 C99,80 98,130 96,165 C94,180 94,180 98,190 C102,180 102,180 100,165 C98,130 101,80 102,25 Z" fill="url(#quill-gold)"/>
+
+              <!-- Metallic Nib Base -->
+              <path d="M92,150 L104,150 L102,175 L94,175 Z" fill="url(#quill-gold)"/>
+              
+              <!-- Pointed Nib -->
+              <path d="M94,175 L102,175 L98,195 Z" fill="#ffffff" opacity="0.9"/>
+              <line x1="98" y1="175" x2="98" y2="192" stroke="#111" stroke-width="1"/>
+              <circle cx="98" cy="180" r="1.5" fill="#111"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="hero-quote-card">
+          <div class="quote-icon">“</div>
+          <blockquote class="elegant-quote">
+            If we knew what we were doing, it would not be called research, would it?
+          </blockquote>
+          <div class="quote-author">— Albert Einstein</div>
+        </div>
       </div>
     </div>
   </div>

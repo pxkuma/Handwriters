@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Typing Effect ───────────────────────────────────────────
   const typingText = document.querySelector('.typing-text');
   if (typingText) {
-    const words = ["With Confidence.", "With Experts.", "With Ease."];
+    const words = ["With Confidence.", "To Global Recognition.", "With Experts."];
     let wordIndex = 0;
     let charIndex = words[0].length; // start fully typed initially
     let isDeleting = false;
